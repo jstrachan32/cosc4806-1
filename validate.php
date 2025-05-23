@@ -6,11 +6,13 @@
   $valid_password = 'password123!';
 
   $username = $_REQUEST['username'];
+  $_SESSION['username'] = $username;
   $password = $_REQUEST['password'];
 
   if ($username == $valid_username && $password == $valid_password)
   {
-    echo 'Successful login!';
+    $_SESSION['authenticated'] = true;
+    header ('location: /');
   } else {
     if (!isset($_SESSION['login_attempts'])){
       $_SESSION['login_attempts'] = 1;
