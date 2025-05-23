@@ -19,9 +19,8 @@
     } else {
       $_SESSION['login_attempts']++;
     }
-
-    echo 'Invalid username or password. You have ' .      
-    $_SESSION['login_attempts'] . ' unsuccessful login attempts.';
+    header ('location: /login.php');
+  
   }
 
   

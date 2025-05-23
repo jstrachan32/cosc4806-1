@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -20,6 +24,14 @@
       <br>
       <input type="submit" value="Submit">
     </form>
+
+    <?php
+      if (isset($_SESSION['login_attempts'])) {
+        echo '<p>Invalid username or password. You have ' .      
+        $_SESSION['login_attempts'] . ' unsuccessful login attempts.</p>';
+      }
+
+    ?>
 
 
   </body>
