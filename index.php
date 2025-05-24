@@ -20,7 +20,9 @@
   </body>
 
   <footer>
-    <p><a href="/logout.php">Click here to logout</a></p>
+
+    <button onclick="document.location='logout.php'">Log Out</button>
+    
   </footer>
   
 </html>

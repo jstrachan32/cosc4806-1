@@ -22,13 +22,12 @@
       <input type="password" id="password" name="password">
       <br>
       <br>
-      <input type="submit" value="Submit">
+      <input type="submit" value="Log In">
     </form>
 
     <?php
       if (isset($_SESSION['login_attempts'])) {
-        echo '<p>Invalid username or password. You have ' .      
-        $_SESSION['login_attempts'] . ' unsuccessful login attempts.</p>';
+        echo '<p style="color: red;">Invalid username or password. Number of unsuccessful login attempts: ' . $_SESSION['login_attempts'] . '</p>';
       }
 
     ?>
